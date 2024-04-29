@@ -152,7 +152,7 @@ dfs = pd.DataFrame(data)
 csv_datas = dfs.to_csv(index=False)
 
 btns = st.download_button(
-    label='Download CSV samples',
+    label='Download CSV CDR samples',
     data=csv_datas,
     file_name='file.csv',
     mime='text/csv'
