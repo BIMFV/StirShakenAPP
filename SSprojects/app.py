@@ -145,15 +145,15 @@ btn = st.download_button(
     mime='text/csv'
 )
 
-cursors= db.samples_last.find()
+cursors= db.StirShaken_samples.find()
 
-datas = list(cursor)
-dfs = pd.DataFrame(data)
+datas = list(cursors)
+dfs = pd.DataFrame(datas)
 csv_datas = dfs.to_csv(index=False)
 
 btns = st.download_button(
     label='Download CSV CDR samples',
     data=csv_datas,
-    file_name='file.csv',
+    file_name='Samples.csv',
     mime='text/csv'
 )
